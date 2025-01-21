@@ -1,0 +1,1 @@
+This is a personal project meant to showcase my learning achievments in web development. The project utilizes a React frontend and an Express Js backend. Both the frontend and backend use typescript. 

@@ -1,9 +1,12 @@
+import { API_ENDPOINTS } from './constants.ts';
 //want to add return type
 async function registerUser(registerInfo: {username: string, password: string}): Promise<boolean> {
-    const url = 'http://localhost:5000/register'
+    const url = API_ENDPOINTS.REGISTER;
 
     try {
         //SECURITY ISSUE???? Look into this more
+        console.log(registerInfo);
+        
         const response = await fetch(url, {
             method: "POST",
             headers: {"Content-Type": "application/json"},

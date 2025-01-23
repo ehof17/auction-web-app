@@ -1,6 +1,8 @@
+import { API_ENDPOINTS } from './constants.ts';
+
 //want to add return type
 async function fetchAuth(authInfo: {username: string; password: string}): Promise<boolean> {
-    const url = 'http://localhost:5000/login'
+    const url = API_ENDPOINTS.LOGIN;
 
     try {
         //SECURITY ISSUE???? Look into this more

@@ -1,8 +1,9 @@
 import AuctionItemData from "../models/IAuctionItem";
+import { API_ENDPOINTS } from './constants.ts';
 
 //want to add return type
 async function addAuctionItem(auctionItem: AuctionItemData): Promise<boolean> {
-    const url = 'http://localhost:5000/AddAuctionItem';
+    const url = API_ENDPOINTS.ADD_AUCTION_ITEM;
 
     try {
         const response = await fetch(url, {

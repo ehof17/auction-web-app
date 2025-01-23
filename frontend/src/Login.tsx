@@ -14,7 +14,7 @@ function Login() {
     useEffect(() => {
         if (loginAttempt) {
             fetchAuth({username:username, password:password}).then(auth => {
-                if(auth.authResult) {
+                if(auth) {
                     navigate("/auctions")
                     console.log("User successfully logged in!");
                 } else {

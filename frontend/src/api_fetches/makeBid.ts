@@ -1,6 +1,7 @@
+import { API_ENDPOINTS } from './constants.ts';
 //want to add return type
 async function makeBid(bidInfo: {id: number, updatedBidder: string, updatedBid: number}): Promise<boolean> {
-    const url = 'http://localhost:5000/MakeBid';
+    const url = API_ENDPOINTS.MAKE_BID;
 
     try {
         const response = await fetch(url, {

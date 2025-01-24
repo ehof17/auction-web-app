@@ -1,33 +1,14 @@
 // Fake user database
-
-import IUser from "./models/IUser.js";
-
-let users = [
-    {
-        "username": "alexm1",
-        "password": "pass1"
-    }
-]
+import hashString from './utils/hash';
+import { IUser, convertToHashedUser} from "./models/IUser";
+import {loginDb, addUserToDb}  from "./helpers/dbhelper";
 
 export function loginUser({username, password}: IUser): boolean {
-    for (let i = 0; i < users.length; ++i) {
-        if (users[i].username == username && users[i].password == password) {
-            return true;
-        }
-    }
-    return false;
+    const hashedUser = convertToHashedUser({username, password});
+    return loginDb(hashedUser);
 }
 
 export function registerUser({username, password}: IUser): boolean {
-    for (let i = 0; i < users.length; ++i) {
-        if (users[i].username == username) {
-            return false;
-        }
-    }
-    users.push({
-        "username": username, 
-        "password": password
-    });
-    console.log(users);
-    return true
+    const hashedUser = convertToHashedUser({username, password});
+    return addUserToDb(hashedUser);
 }

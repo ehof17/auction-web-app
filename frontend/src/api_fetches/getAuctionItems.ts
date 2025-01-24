@@ -1,8 +1,9 @@
+import { API_ENDPOINTS } from './constants.ts';
 import AuctionItemData from "../models/IAuctionItem";
 
 //want to add return type
 async function fetchAuctionItems(): Promise<AuctionItemData[]> {
-    const url = 'http://localhost:5000/GetAuctionItems';
+    const url = API_ENDPOINTS.GET_AUCTION_ITEMS;
 
     try {
         const response = await fetch(url);

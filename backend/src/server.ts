@@ -2,12 +2,12 @@ import express, {Request, Response} from "express";
 import cors from "cors";
 import { loginUser, registerUser } from "./authenticate.js";
 import {GetAuctionItems, GetAuctionItem, AddAuctionItem, MakeBid, DeleteAuctionItem} from "./auction.js";
-import IUser from "./models/IUser.js";
+import {IUser} from "./models/IUser";
 import IAuctionItem from "./models/IAuctionItem.js";
 import IBidInfo from "./models/IBidInfo.js";
 
 const server = express();
-const PORT = 5000;
+const PORT = 8000;
 
 /*
 **************************
@@ -33,6 +33,7 @@ server.post("/login", (req: Request<{},{},IUser>, res: Response) => {
 }) 
 
 server.post("/register", (req: Request<{},{},IUser>, res: Response) => {
+    console.log(req.body);
     res.send({"registerResult": registerUser(req.body)});
 }) 
 

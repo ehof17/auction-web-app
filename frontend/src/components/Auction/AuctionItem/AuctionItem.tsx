@@ -1,8 +1,7 @@
 import React from 'react';
-import AuctionInfo from './AuctionInfo.tsx';
-import AuctionTimer from './AuctionTimer.tsx';
-import AuctionBid from './AuctionBid.tsx';
-import IAuctionItem from './models/IAuctionItem.ts';
+import AuctionInfo from '../AuctionInfo/AuctionInfo.tsx';
+import AuctionTimer from '../AuctionTimer/AuctionTimer.tsx';
+import AuctionBid from '../AuctionBid/AuctionBid.tsx';
 
 function AuctionItem() {
 

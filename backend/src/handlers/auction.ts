@@ -1,5 +1,5 @@
-import IAuctionItem from "./models/IAuctionItem.js";
-import IBidInfo from "./models/IBidInfo.js";
+import IAuctionItem from "../models/IAuctionItem.js";
+import IBidInfo from "../models/IBidInfo.js";
 
 //fake auction database
 let auction_items: Array<IAuctionItem> = [
@@ -9,7 +9,7 @@ let auction_items: Array<IAuctionItem> = [
         "description":"pee pee poo poo",
         "startingPrice":25000,
         "startDate": new Date("2025-01-09T19:51:00"),
-        "endDate": new Date("2025-01-30T19:51:00"),
+        "endDate": new Date("2026-01-30T19:51:00"),
         "currentBidder":"Chuck Pagano",
         "currentBid":30000.01
     }

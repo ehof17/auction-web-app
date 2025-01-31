@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router";
 import './index.css';
-import App from './App.tsx';
-import Login from './Login.tsx';
-import Register from './Register.tsx';
-import AuctionLayout from './AuctionLayout.tsx';
+import App from './components/App.tsx';
+
+import {Login, AuctionLayout} from './pages';
+
+
+
+
 //import reportWebVitals from './reportWebVitals.ts';
 
 const root = ReactDOM.createRoot(
@@ -17,8 +20,8 @@ root.render(
       <Route path="/" element={<App />}>
         <Route index element={<Login />} />
       </Route>
-      <Route path="/register" element={<Register />}></Route>
       <Route path="/auctions" element={<AuctionLayout/>}></Route>
+    
     </Routes>
   </BrowserRouter>
 );

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { AuctionItemContext } from './contexts/contexts.ts';
+import { AuctionItemContext } from '../../../contexts/contexts.ts';
 
 interface AuctionInfoData {
     seller: string, 

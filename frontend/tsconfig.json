@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "ESNext",
+      "lib": ["DOM", "ESNext"],
+      "strict": true,
+      "esModuleInterop": true,
+      "moduleResolution": "bundler",
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "jsx": "react",
+      "allowImportingTsExtensions": true,
+      "resolveJsonModule": true,
+      "baseUrl": "src",
+      "paths": {
+        "@pages/*": ["pages/*"],
+        "@components/*": ["components/*"],
+        "@utils/*": ["utils/*"],
+        "@api/*": ["api_fetches/*"]
+      }
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "dist"]
+  }

@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import AuctionAdder from './AuctionAdder.tsx';
-import ActiveAuctions from './ActiveAuctions.tsx';
+import { AuctionAdder, ActiveAuctions } from '../../components';
 
 function AuctionLayout() {
     

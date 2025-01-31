@@ -1,10 +1,6 @@
-import express, {Request, Response} from "express";
+import express from "express";
 import cors from "cors";
-import { loginUser, registerUser } from "./authenticate.js";
-import {GetAuctionItems, GetAuctionItem, AddAuctionItem, MakeBid, DeleteAuctionItem} from "./auction.js";
-import {IUser} from "./models/IUser";
-import IAuctionItem from "./models/IAuctionItem.js";
-import IBidInfo from "./models/IBidInfo.js";
+import routes from "./routes"
 
 const server = express();
 const PORT = 8000;
@@ -19,48 +15,7 @@ server.use(cors({
 }));
 
 server.use(express.json())
-
-/*
-**************************
-Authenticate Controller 
-**************************
-*/
-
-// takes user as additional argument; should we make this get??
-server.post("/login", (req: Request<{},{},IUser>, res: Response) => {
-    console.log(req.body);
-    res.send({"authResult": loginUser(req.body)});
-}) 
-
-server.post("/register", (req: Request<{},{},IUser>, res: Response) => {
-    console.log(req.body);
-    res.send({"registerResult": registerUser(req.body)});
-}) 
-
-
-
-/*
-**************************
-Auction Controller 
-**************************
-*/
-
-server.get("/GetAuctionItems", (req: Request, res: Response) => {
-    res.send(GetAuctionItems());
-})
-
-server.get("/GetAuctionItem")
-
-server.post("/AddAuctionItem", (req: Request<{},{},IAuctionItem>, res: Response) => {
-    res.send({"addResult": AddAuctionItem(req.body)});
-})
-
-server.post("/MakeBid", (req: Request<{},{},IBidInfo>, res: Response) => {
-    console.log(req.body);
-    res.send({"bidResult": MakeBid(req.body)});
-})
-
-server.delete("/DeleteAuctionItem")
+server.use("/", routes);
 
 /*
 ************************** 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { AuctionItemContext } from './contexts/contexts.ts';
-import makeBid from './api_fetches/makeBid.ts';
+import { AuctionItemContext } from '../../../contexts/contexts.ts';
+import makeBid from '../../../api_fetches/makeBid.ts';
 
 function AuctionTimer() {
 

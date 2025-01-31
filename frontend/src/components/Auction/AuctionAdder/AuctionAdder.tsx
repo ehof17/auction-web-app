@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import addAuctionItem from './api_fetches/addAuctionItem.ts';
+import addAuctionItem from '../../../api_fetches/addAuctionItem.ts';
 
 function AuctionAdder() {
     const [addAuctionItemAttempt, setAddAuctionItemAttempt] = useState(false);

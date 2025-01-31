@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { AuctionItemContext } from './contexts/contexts.ts';
-import timeDiff from './utils/time.ts';
+import { AuctionItemContext } from '../../../contexts/contexts.ts';
+import timeDiff from '../../../utils/time.ts';
 
 interface AuctionTimerData {
     startDate: Date, 

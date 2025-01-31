@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import fetchAuctionItems from './api_fetches/getAuctionItems.ts';
-import IAuctionItem from './models/IAuctionItem.ts';
-import AuctionItem from './AuctionItem.tsx';
-import { AuctionItemContext } from './contexts/contexts.ts';
+import fetchAuctionItems from '../../../api_fetches/getAuctionItems.ts';
+import IAuctionItem from '../../../models/IAuctionItem.ts';
+import  AuctionItem  from '../AuctionItem/AuctionItem.tsx';
+import { AuctionItemContext } from '../../../contexts/contexts.ts';
 
 function ActiveAuctions() {
     const [auctionItems, setAuctionItems] = useState<IAuctionItem[]>([]);
